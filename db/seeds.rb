@@ -8,7 +8,7 @@
 
 require 'json'
 require 'open-uri'
-# require 'faker'
+require 'faker'
 
 url = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 
