@@ -10,6 +10,9 @@ require 'json'
 require 'open-uri'
 require 'faker'
 
+# Ingredient.destroy_all
+# Cocktail.destroy_all
+
 url = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 
 ingredient_arr = JSON.parse(open(url).read)['drinks']
