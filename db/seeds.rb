@@ -8,24 +8,17 @@
 
 require 'json'
 require 'open-uri'
-require 'faker'
+# require 'faker'
 
 url = "http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"
 
-
-# ingredient_arr = JSON.parse(open(url).read)['drinks']
-# ingredient_arr.each do |hash|
-#   Ingredient.create(name: hash['strIngredient1'])
-# end
-
-# ins = Ingredient.all.map(&:name)
-# nums = (1..10).to_a
-# doses_arr = %w[ml cc tsp piece drop Tsp]
+ingredient_arr = JSON.parse(open(url).read)['drinks']
+ingredient_arr.each do |hash|
+  Ingredient.create(name: hash['strIngredient1'])
+end
 
 # 20.times do
 #   Cocktail.create(name: Faker::HitchhikersGuideToTheGalaxy.character)
 # end
 
-# 100.times do
-
-# end
+# puts "done"
