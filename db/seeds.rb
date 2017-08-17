@@ -17,8 +17,8 @@ ingredient_arr.each do |hash|
   Ingredient.create(name: hash['strIngredient1'])
 end
 
-# 20.times do
-#   Cocktail.create(name: Faker::HitchhikersGuideToTheGalaxy.character)
-# end
+20.times do
+  Cocktail.create(name: Faker::HitchhikersGuideToTheGalaxy.character)
+end
 
 # puts "done"
