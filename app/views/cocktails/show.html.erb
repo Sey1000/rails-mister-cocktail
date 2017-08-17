@@ -1,0 +1,15 @@
+<h1>
+  <%= @cocktail.name %>
+</h1>
+<ul class="list-unstyled">
+  <% @doses.each do |d| %>
+    <li>
+      <%= d.ingredient.name %> <%= d.description %>      
+    </li>
+  <% end %>
+</ul>
+
+<%= link_to 'Add more ingredients', new_cocktail_dose_path(@cocktail), 
+class: "btn btn-primary" %>
+
+<%= render 'doses/form' %>

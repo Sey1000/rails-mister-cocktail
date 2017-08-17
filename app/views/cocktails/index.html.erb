@@ -1,0 +1,11 @@
+<h1>Cocktails</h1>
+
+<% @cocktails.each do |ct| %>
+<ul class="list-unstyled">
+  <li>
+    <%= link_to ct.name, cocktail_path(ct.id) %>
+  </li>
+</ul>
+<% end %>
+
+<%= link_to 'All doses', doses_path, class: "btn btn-warning" %>
