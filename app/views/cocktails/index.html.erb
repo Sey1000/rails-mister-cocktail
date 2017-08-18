@@ -1,14 +1,42 @@
-<h1>Cocktails</h1>
+<div class="jumbotron jumbo-background">
+  <div class="container">
+  <h1>Catchy Title</h1>
+  <h3>Cocktail made just for you or something</h3>
+  </div>
+</div>
 
-<% @cocktails.each do |ct| %>
-<ul class="list-unstyled">
-  <li>
-    <% if ct.photo? %>
-      <%= cl_image_tag ct.photo.path, crop: :fill, style: "height: 50px" %>
-    <% else %>
-      <%= image_tag "https://cdn.liquor.com/wp-content/uploads/2010/01/04120930/manhattan1.jpg", style: "height: 50px" %>
+<div class="container">
+  <div class="cocktail-card-container">
+    <% @cocktails.each do |ct| %>
+      <%= link_to cocktail_path(ct.id) do %>
+        <% if ct.photo? %>
+          <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+               url('<%= cl_image_path ct.photo.path, crop: :fill; %>')">
+               <div class="white-filter"></div>
+            <div class="cocktail-card-title">
+              <div>
+                <h4>
+                  <%= ct.name %>
+                </h4>
+              </div>
+              <i class="fa fa-chevron-circle-right fa-margin-right"></i>
+            </div>
+          </div>
+        <% else %>
+          <div class="cocktail-card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)),
+               url('https://cdn.liquor.com/wp-content/uploads/2010/01/04120930/manhattan1.jpg')">
+               <div class="white-filter"></div>
+            <div class="cocktail-card-title">
+              <div>
+                <h4>
+                  <%= ct.name %>
+                </h4>
+              </div>
+              <i class="fa fa-chevron-circle-right fa-margin-right"></i>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
     <% end %>
-    <%= link_to ct.name, cocktail_path(ct.id) %>
-  </li>
-</ul>
-<% end %>
+  </div>
+</div>

@@ -1,8 +1,6 @@
 .link-white {
   color: white;
-  transition: 0.3s ease;
-}
-
-.link_white:hover {
-  opacity: 0.7;
+  &:hover {
+    color: #CCCCCC;
+  }
 }

@@ -8,8 +8,8 @@
     <%= cl_image_tag @cocktail.photo.path, width: 200, height: 300, crop: :fill %>
     <% else %>
     <%= simple_form_for(@cocktail) do |f| %>
-    <%= f.input :photo, as: :attachinary %>
-    <%= f.input :external_photo_url, as: :string %>
+    <%= f.input :photo, label: "Upload photo", as: :attachinary %>
+    <%= f.input :external_photo_url, label: "..or photo url", as: :string %>
     <%= f.submit class: "btn btn-default" %>
     <% end %>
     <br>
