@@ -3,10 +3,22 @@
 </h1>
 <ul class="list-unstyled">
   <% @cocktail.doses.each do |d| %>
-    <li>
-      <%= d.ingredient.name %> <%= d.description %>      
-    </li>
+  <li>
+    <%= d.ingredient.name %> <%= d.description %>
+    <%= link_to dose_path(d), method: :delete do %>
+      <i class="fa fa-trash-o"></i>
+    <% end %>
+  </li>
   <% end %>
 </ul>
 
-<%= render 'doses/form' %>
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-md-4">
+    <h3>Add more doses</h3>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+    <%= f.association :ingredient%>
+    <%= f.input :description %>
+    <%= f.submit class: "btn btn-primary" %>
+    <% end %>    
+  </div>
+</div>
