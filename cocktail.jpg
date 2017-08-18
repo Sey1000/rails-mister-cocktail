@@ -1,0 +1,15 @@
+HTTP/1.1 200 OK
+Content-Type: image/jpeg
+Content-Length: 75911
+Connection: keep-alive
+Date: Fri, 18 Aug 2017 10:25:21 GMT
+Last-Modified: Wed, 03 May 2017 00:09:54 GMT
+ETag: "30c1791aba77ac4c26d88918fbe745a1"
+Cache-Control: max-age=31536000
+Expires: Thu, 03 May 2018 00:09:53 GMT
+Accept-Ranges: bytes
+Server: AmazonS3
+X-Cache: Miss from cloudfront
+Via: 1.1 3be13eda32dd0e943a248cf00cf1dbc8.cloudfront.net (CloudFront)
+X-Amz-Cf-Id: WUzZWKz7i30i3E1xWL4VZIBAWBsyVmK9xnlwyyZRKrQeoOfErghzlw==
+

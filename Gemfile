@@ -10,7 +10,9 @@ end
 gem 'figaro'
 
 # images
-gem 'cloudinary'
+gem 'cloudinary', '1.1.7'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
 
 gem 'json'
 gem 'faker'

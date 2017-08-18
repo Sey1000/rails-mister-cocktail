@@ -3,6 +3,11 @@
 <% @cocktails.each do |ct| %>
 <ul class="list-unstyled">
   <li>
+    <% if ct.photo? %>
+      <%= cl_image_tag ct.photo.path, crop: :fill, style: "height: 50px" %>
+    <% else %>
+      <%= image_tag "https://cdn.liquor.com/wp-content/uploads/2010/01/04120930/manhattan1.jpg", style: "height: 50px" %>
+    <% end %>
     <%= link_to ct.name, cocktail_path(ct.id) %>
   </li>
 </ul>
