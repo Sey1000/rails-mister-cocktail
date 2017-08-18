@@ -9,6 +9,9 @@ end
 
 gem 'figaro'
 
+# images
+gem 'cloudinary'
+
 gem 'json'
 gem 'faker'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
